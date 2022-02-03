@@ -1,0 +1,26 @@
+{
+  "name": "guess-my-number",
+  "version": "1.0.0",
+  "description": "Re-make of guess-my-number project from Jonas Schmedtmann's JavaScript course",
+  "scripts": {
+    "start": "parcel ./src/index.html",
+    "build": "parcel build ./src/index.html --dist-dir dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/j-koziel/guess-my-number.git"
+  },
+  "keywords": [
+    "game",
+    "project"
+  ],
+  "author": "Jonathan Koziel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/j-koziel/guess-my-number/issues"
+  },
+  "homepage": "https://github.com/j-koziel/guess-my-number#readme",
+  "dependencies": {
+    "parcel": "^2.2.1"
+  }
+}
