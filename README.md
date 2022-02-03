@@ -1,2 +1,3 @@
 # guess-my-number
-Re-make of guess-my-number project from javascript course
+
+Re-make of guess-my-number project from Jonas Schmedtmann's JavaScript course
