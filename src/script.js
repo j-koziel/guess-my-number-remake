@@ -12,12 +12,29 @@ let highscore = 0;
 // selecting DOM elements
 const btnAgain = document.querySelector('.again');
 const btnCheck = document.querySelector('.check');
+const guess = document.querySelector('.guess');
 const message = document.querySelector('.message');
 
-// Helper functions
+// init function
+const init = function () {
+  console.log('Application initialized');
+  guess.value = '';
+};
+init();
 
-const noNumberMessage = function () {
-  message.textContent = '⛔ No number!';
+// Helper functions
+const checkNumber = function (guessValue) {
+  // If there is no number
+  if (!guessValue || guessValue < 0) {
+    message.textContent = '⛔ Invalid number!';
+  } else if (guessValue === winNumber) {
+    message.textContent = '🎉 Correct Number!';
+    document.body.style.backgroundColor = '#60b347';
+  } else if (guessValue > winNumber) {
+    message.textContent = '📈 Too high!';
+  } else if (guessValue < winNumber) {
+    message.textContent = '📉 Too low!';
+  }
 };
 
 // Testing if correct elements selected
@@ -27,17 +44,8 @@ const noNumberMessage = function () {
 // });
 
 btnCheck.addEventListener('click', () => {
-  const guessValue = Number(document.querySelector('.guess').value);
-  // If there is no value
-  if (!guessValue) noNumberMessage();
-  // check if guessed answer is correct
+  const guessNumber = Number(guess.value);
+  console.log(guessNumber);
+
+  checkNumber(guessNumber);
 });
-
-// if not
-
-// init function
-const init = function () {
-  console.log('Application initialized');
-};
-
-init();
