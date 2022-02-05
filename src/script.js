@@ -15,8 +15,8 @@ const message = document.querySelector('.message');
 
 // init function
 const init = function () {
-  console.log('Application initialized');
   guess.value = '';
+  score = 20;
 };
 init();
 
@@ -69,7 +69,6 @@ const again = function () {
 // Handler functions
 btnCheck.addEventListener('click', () => {
   const guessNumber = Number(guess.value);
-  console.log(guessNumber);
 
   checkNumber(guessNumber);
 });
