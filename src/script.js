@@ -21,7 +21,7 @@ const init = function () {
 init();
 
 // check function
-const checkNumber = function (guessValue) {
+const checkNumber = function (guessValue, btn) {
   // If there is no number
   if (!guessValue || guessValue < 0) {
     message.textContent = '⛔ Invalid number!';
@@ -32,6 +32,7 @@ const checkNumber = function (guessValue) {
     document.body.style.backgroundColor = '#60b347';
     highscore = score;
     highScoreElement.textContent = highscore;
+    btn.disabled = true;
 
     // if the guess is greater than the winning number
   } else if (guessValue > winNumber) {
@@ -70,7 +71,7 @@ const again = function () {
 btnCheck.addEventListener('click', () => {
   const guessNumber = Number(guess.value);
 
-  checkNumber(guessNumber);
+  checkNumber(guessNumber, btnCheck);
 });
 
 btnAgain.addEventListener('click', again);
