@@ -56,7 +56,7 @@ const checkNumber = function (guessValue, btn) {
   }
 };
 
-const again = function () {
+const again = function (btn) {
   // Reset all values
   winNumber = Math.trunc(Math.random() * 20) + 1;
   guess.value = '';
@@ -65,6 +65,7 @@ const again = function () {
   score = 20;
   scoreElement.textContent = score;
   message.textContent = 'Start guessing...';
+  btn.disabled = false;
 };
 
 // Handler functions
