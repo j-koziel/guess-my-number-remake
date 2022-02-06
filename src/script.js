@@ -75,4 +75,6 @@ btnCheck.addEventListener('click', () => {
   checkNumber(guessNumber, btnCheck);
 });
 
-btnAgain.addEventListener('click', again);
+btnAgain.addEventListener('click', () => {
+  again(btnCheck);
+});
