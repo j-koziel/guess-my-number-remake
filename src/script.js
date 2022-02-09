@@ -30,7 +30,7 @@ const checkNumber = function (guessValue, btn) {
   } else if (guessValue === winNumber) {
     message.textContent = '🎉 Correct Number!';
     document.body.style.backgroundColor = '#60b347';
-    highscore = score;
+    if (score > highscore) highscore = score;
     highScoreElement.textContent = highscore;
     btn.disabled = true;
 
@@ -61,8 +61,9 @@ const again = function (btn) {
   winNumber = Math.trunc(Math.random() * 20) + 1;
   guess.value = '';
   document.body.style.backgroundColor = '#222';
-  if (highscore > score) highScoreElement.textContent = highscore;
+  highscore = 0;
   score = 20;
+  highScoreElement.textContent = highscore;
   scoreElement.textContent = score;
   message.textContent = 'Start guessing...';
   btn.disabled = false;
