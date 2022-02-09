@@ -17,6 +17,7 @@ const message = document.querySelector('.message');
 const init = function () {
   guess.value = '';
   score = 20;
+  highscore = 0;
 };
 init();
 
