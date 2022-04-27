@@ -1,7 +1,7 @@
 'use strict';
 
 // state variables
-let winNumber = Math.trunc(Math.random() * 20) + 1;
+let winNumber = Math.trunc(Math.random() * 100) + 1;
 let score = 20;
 let highscore = 0;
 
